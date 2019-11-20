@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ContactService {
 
-  private baseUrl = 'http://localhost:8080/api';
+  private baseUrl = 'https://pinnacle-excercise.herokuapp.com/api'
 
   constructor(private http: HttpClient) { }
 

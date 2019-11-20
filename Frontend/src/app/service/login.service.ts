@@ -15,7 +15,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   loginService(username: string, password: string) {
-    return this.http.get('http://localhost:8080/api/login', { headers: { authorization: this.createBasicAuthToken(username, password) } })
+    return this.http.get('https://pinnacle-excercise.herokuapp.com/api/login', { headers: { authorization: this.createBasicAuthToken(username, password) } })
       .pipe(map((res) => {
         this.username = username;
         this.password = password;
