@@ -1,0 +1,31 @@
+<div class="col-sm-12 mt-3">
+  <h1 class="text-center">Contact List</h1>
+  <button class="btn btn-block btn-info my-5" (click)="addContact()">Add Contact</button>
+  <table class="table table-striped">
+    <thead class="thead-dark text-center">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Nickname</th>
+        <th scope="col">Phone</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr *ngFor="let contact of contacts | async">
+        <td>{{ contact.id }}</td>
+        <td>{{ contact.name }}</td>
+        <td>{{ contact.age }}</td>
+        <td>{{ contact.nickname }}</td>
+        <td>{{ contact.phone }}</td>
+        <td>
+          <button (click)="updateContact(contact.id)" class="btn btn-warning mx-2">Edit</button>
+          <button (click)="deleteContact(contact.id)" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<router-outlet></router-outlet>

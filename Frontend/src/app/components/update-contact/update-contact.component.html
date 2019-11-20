@@ -1,0 +1,23 @@
+<div class="col-sm-12 mt-3">
+  <h1 class="text-center">Update Contact</h1>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" class="form-control" [(ngModel)]="contact.name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number" id="age" class="form-control" [(ngModel)]="contact.age" name="age" required>
+    </div>
+    <div class="form-group">
+      <label for="nickname">Nickname</label>
+      <input type="text" id="nickname" class="form-control" [(ngModel)]="contact.nickname" name="nickname" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" class="form-control" [(ngModel)]="contact.phone" name="phone" required>
+    </div>
+
+    <button type="submit" class="btn btn-block btn-primary">Submit</button>
+  </form>
+</div>
